@@ -33,9 +33,13 @@ Internal REcon:
 
 Reference URL's:
 1)https://osintframework.com/
+
 2)https://www.youtube.com/watch?v=eIdVtCQSa3s
+
 3)https://www.dummies.com/article/academics-the-arts/study-skills-test-prep/comptia-pentestplus/passive-information-gathering-for-pentesting-275726/
+
 4)https://www.dummies.com/article/academics-the-arts/study-skills-test-prep/comptia-pentestplus/active-information-gathering-for-pentesting-275736/
+
 5)https://www.exploit-db.com/google-hacking-database      - Public available sources link hint
 
 
