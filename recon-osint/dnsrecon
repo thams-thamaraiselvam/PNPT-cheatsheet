@@ -1,1 +1,13 @@
 
+dnsrecon
+Powerful DNS enumeration tool.
+
+Can enumerate subdomains, zone transfers, brute force names.
+
+
+dnsrecon -d target.com
+
+dnsrecon -d target.com -t axfr
+
+dnsrecon -d target.com -t brt
+
