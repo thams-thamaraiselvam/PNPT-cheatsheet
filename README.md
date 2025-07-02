@@ -2,6 +2,76 @@
 
 This repo contains my personal notes, tools, and command references while preparing for the Practical Network Penetration Tester (PNPT) exam by TCM Security.
 
+---
+
+## ✅ PNPT Tool Checklist
+
+### 🕵️ Recon & OSINT
+- [ ] whois
+- [ ] nslookup
+- [ ] dnsrecon
+- [ ] dig
+- [ ] crt.sh
+- [ ] Google Dorking
+- [ ] Sublist3r
+- [ ] Amass
+- [ ] HTTProbe
+- [ ] ffuf
+- [ ] Wappalyzer / WhatWeb / BuiltWith
+- [ ] breach-parse
+- [ ] DeHashed
+
+### 🔍 Scanning & Enumeration
+- [ ] nmap
+- [ ] netcat
+- [ ] Nessus
+- [ ] smbclient
+- [ ] smbmap
+- [ ] responder
+- [ ] ntlmrelayx
+- [ ] mitm6
+
+### 💥 Exploitation & AD Attacks
+- [ ] Metasploit
+- [ ] ldapdomaindump
+- [ ] BloodHound
+- [ ] PlumbHound
+- [ ] PingCastle
+- [ ] mimikatz
+- [ ] secretsdump
+- [ ] crackmapexec
+- [ ] GetUserSPNs
+- [ ] incognito
+- [ ] hashcat
+- [ ] john the ripper
+
+### 🧭 Post‑Exploitation & Pivoting
+- [ ] proxychains
+- [ ] Trevorspray
+
+### 📈 Privilege Escalation – Windows
+- [ ] WinPEAS
+- [ ] Sherlock
+- [ ] Watson
+- [ ] PowerUp
+- [ ] JAWS
+- [ ] Windows Exploit Suggester
+
+### 📈 Privilege Escalation – Linux
+- [ ] LinPEAS
+- [ ] LinEnum
+- [ ] Linux Exploit Suggester
+- [ ] LinuxPrivChecker
+
+
+
+
+
+
+
+
+
+
 ## 📂 Sections
 
 - `OSINT/` – Open-source intelligence tools & techniques
