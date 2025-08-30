@@ -1,0 +1,33 @@
+1) Ping sweep:
+
+!/bin/bash
+if [ "$1" = "" ]; then
+echo "You forgot the IP address!"
+echo "Syntax: ./ipsweep.sh 10.0.2"
+else
+for ip in $(seq 1 254); do
+ping -c 1 $1.$ip | grep "64 bytes" | cut
+-d " " -f 4 | tr -d ":" &
+done
+fi
+
+Checks if an IP base (like 10.0.2 ) is provided.
+Uses a loop to ping every address from .1 to .254 .
+Filters responses to extract just the IPs that replied.
+Runs each ping in the background with & for faster
+execution
+
+chmod +x ipsweep.sh
+./ipsweep.sh 10.0.2 > iplist.txt
+
+[Ip address will store on iplist.txt]
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+2) One-Liner: Port Scan for Alive Hosts
+
+for ip in $(cat iplist.txt); do nmap -p 80 -sS -
+T4 $ip & done
+
+---------------------------------------------------------------------------------------------------------------------------------
