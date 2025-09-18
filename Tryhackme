@@ -1,1 +1,40 @@
 
+TryHackMe - Blue Box
+
+1. Objective
+
+Gain initial access to the Blue Linux box and escalate privileges to root.
+
+2. Scope
+
+Target IP: 10.10.120.152
+
+Allowed tools: Nmap, Netcat, Gobuster, SSH, LinEnum, etc.
+
+Only internal attacks allowed (TryHackMe rules).
+
+
+3. Recon / Scanning
+
+Nmap scan: nmap -sC -sV -oN nmap_blue.txt 10.10.120.152
+
+Result:
+
+135/tcp   open  msrpc        Microsoft Windows RPC
+139/tcp   open  netbios-ssn  Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds Windows 7 Professional 7601 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)
+3389/tcp  open  tcpwrapped
+
+Observation: RPC running, smb enabled, rdp accessible
+Port	                       Service	                                 Observation	                                                            Next Steps / Enumeration Actions
+135/tcp	msrpc	       MSRPC service running,                           may allow RPC enumeration.	                                   Use rpcclient or enum4linux to enumerate MSRPC services.
+139/tcp	netbios-ssn	   SMB service running,           message signing enabled but not required; guest account accessible.	           Enumerate SMB shares with smbclient -L //<IP>/ -N; check for readable/writable shares.
+445/tcp	microsoft-ds	SMB2 service running,           message signing enabled but not enforced; Windows 7 SP1 detected.	              Further SMB enumeration; check for accessible files or misconfigurations.
+3389/tcp	tcpwrapped / RDP	RDP accessible,            SSL certificate valid, CN matches hostname.	                                  Test RDP login (labs only / authorized tests); enumerate RDP info.
+
+
+
+4. Enumeration
+
+Port 135/  Tools used: enum4linux, rpcclient
+
