@@ -18,6 +18,8 @@ Only internal attacks allowed (TryHackMe rules).
 
 Nmap scan: nmap -sC -sV -oN nmap_blue.txt 10.10.120.152
 
+Hint Note:nmap -sC -sV --script vuln -oN Blue.nmap 10.10.120.152
+
 Result:
 
 135/tcp   open  msrpc        Microsoft Windows RPC
@@ -37,4 +39,6 @@ Port	                       Service	                                 Observation
 4. Enumeration
 
 Port 135/  Tools used: enum4linux, rpcclient
+
+
 
