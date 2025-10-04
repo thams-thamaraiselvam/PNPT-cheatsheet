@@ -1,0 +1,4 @@
+nmap -sn 192.168.1.1/24
+nmap -A 192.168.1.1/24
+
+nmap -A -sC -sV -T4 192.168.1.1 -oN Nmap_Fullscan_192.168.1.1.txt
